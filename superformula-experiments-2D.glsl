@@ -18,7 +18,7 @@ float super(float phi, float a, float b, float n1, float n2, float n3, float y, 
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
     // Map coords to [0, 1].
-	vec2 p = fragCoord.xy / iResolution.xy;
+    vec2 p = fragCoord.xy / iResolution.xy;
     
     // Map coords to [-1, 1].
     vec2 q = -1.0 + 2.0*p;
@@ -79,5 +79,5 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     col *= smoothstep(r + 0.03, r, length(q));
     
     // Output final color.
-	fragColor = vec4(col, 1.0);
+    fragColor = vec4(col, 1.0);
 }
